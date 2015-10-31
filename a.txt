@@ -1,0 +1,31 @@
++--------+---------------------------------+-------------------+------------------------+----------------+---------------+
+| Domain | URI                             | Name              | Action                 | Before Filters | After Filters |
++--------+---------------------------------+-------------------+------------------------+----------------+---------------+
+|        | DELETE api/todos/clean          |                   | TodoController@clean   |                |               |
+|        | GET|HEAD api/todos              | api.todos.index   | TodoController@index   |                |               |
+|        | GET|HEAD api/todos/create       | api.todos.create  | TodoController@create  |                |               |
+|        | POST api/todos                  | api.todos.store   | TodoController@store   |                |               |
+|        | GET|HEAD api/todos/{todos}      | api.todos.show    | TodoController@show    |                |               |
+|        | GET|HEAD api/todos/{todos}/edit | api.todos.edit    | TodoController@edit    |                |               |
+|        | PUT api/todos/{todos}           | api.todos.update  | TodoController@update  |                |               |
+|        | PATCH api/todos/{todos}         |                   | TodoController@update  |                |               |
+|        | DELETE api/todos/{todos}        | api.todos.destroy | TodoController@destroy |                |               |
+|        | GET|HEAD api/users              | api.users.index   | UserController@index   |                |               |
+|        | GET|HEAD api/users/create       | api.users.create  | UserController@create  |                |               |
+|        | POST api/users                  | api.users.store   | UserController@store   |                |               |
+|        | GET|HEAD api/users/{users}      | api.users.show    | UserController@show    |                |               |
+|        | GET|HEAD api/users/{users}/edit | api.users.edit    | UserController@edit    |                |               |
+|        | PUT api/users/{users}           | api.users.update  | UserController@update  |                |               |
+|        | PATCH api/users/{users}         |                   | UserController@update  |                |               |
+|        | DELETE api/users/{users}        | api.users.destroy | UserController@destroy |                |               |
+|        | DELETE api/users/clean          |                   | UserController@clean   |                |               |
+|        | GET|HEAD api/votes              | api.votes.index   | VoteController@index   |                |               |
+|        | GET|HEAD api/votes/create       | api.votes.create  | VoteController@create  |                |               |
+|        | POST api/votes                  | api.votes.store   | VoteController@store   |                |               |
+|        | GET|HEAD api/votes/{votes}      | api.votes.show    | VoteController@show    |                |               |
+|        | GET|HEAD api/votes/{votes}/edit | api.votes.edit    | VoteController@edit    |                |               |
+|        | PUT api/votes/{votes}           | api.votes.update  | VoteController@update  |                |               |
+|        | PATCH api/votes/{votes}         |                   | VoteController@update  |                |               |
+|        | DELETE api/votes/{votes}        | api.votes.destroy | VoteController@destroy |                |               |
+|        | DELETE api/votes/clean          |                   | VoteController@clean   |                |               |
++--------+---------------------------------+-------------------+------------------------+----------------+---------------+

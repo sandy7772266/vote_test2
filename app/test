@@ -1,0 +1,23 @@
+<?php
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+
+
+Route::get('/candidates_select/', array('as' => 'candidates_select', function()
+{
+        $data = Input::all();
+        $id = $data['vote_id'];
+
+        try {
+        $account = Account::where('vote_id', '=', $data['vote_id'])->where('username', '=', $data['account'])->firstorfail();
+        $account_id = $account->id;
+        Session::put('account_id', $account_id);
+        $candidates = Candidate::where('vote_id', '=', $id)->get();
+
+        return View::make('tasks.candidate_select', compact('candidates', 'account_id'));
+
+        } catch(ModelNotFoundException $e) {
+        $err = "投票代號或籤號錯誤";
+        return View::make('tasks.index2', compact('votes','err'));
+        }
+
+}));
